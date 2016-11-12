@@ -95,12 +95,17 @@ public class TwitterProxy {
     private AirIndex buildAirIndex(String[] parts) {
         AirIndex airIndex = new AirIndex();
 
-        airIndex.setDateTime(DateTimeUtils.fromStr(parts[0]));
+        airIndex.setTimestamp(DateTimeUtils.toTS(parts[0]));
         airIndex.setConcentration(Double.parseDouble(parts[2]));
         airIndex.setAqi(Integer.parseInt(parts[3]));
         airIndex.setDefinition(parts[4]);
 
         return airIndex;
+    }
+
+    public static void main(String[] args) {
+        List<AirIndex> list = new TwitterProxy().getAll();
+        list.forEach(index -> LOG.info(index.toString()));
     }
 
 }

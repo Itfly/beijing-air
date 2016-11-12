@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
  */
 public class AirIndex {
 
-    private LocalDateTime dateTime;
+    private int timestamp;
 
     private double concentration;
 
@@ -15,12 +15,12 @@ public class AirIndex {
 
     private String definition;
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public int getTimestamp() {
+        return timestamp;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+    public void setTimestamp(int timestamp) {
+        this.timestamp = timestamp;
     }
 
     public double getConcentration() {
@@ -47,4 +47,13 @@ public class AirIndex {
         this.definition = definition;
     }
 
+    @Override
+    public String toString() {
+        return "AirIndex{" +
+                "timestamp=" + timestamp +
+                ", concentration=" + concentration +
+                ", aqi=" + aqi +
+                ", definition='" + definition + '\'' +
+                '}';
+    }
 }
