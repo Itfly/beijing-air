@@ -1,4 +1,4 @@
-package com.itfly.beijingair.twitter;
+package com.itfly.beijingair.util;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

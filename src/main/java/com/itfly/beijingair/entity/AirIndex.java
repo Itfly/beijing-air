@@ -1,13 +1,11 @@
-package com.itfly.beijingair.twitter;
-
-import twitter4j.Status;
+package com.itfly.beijingair.entity;
 
 import java.time.LocalDateTime;
 
 /**
  * Created by fezho on 11/12/2016.
  */
-public class Message {
+public class AirIndex {
 
     private LocalDateTime dateTime;
 
